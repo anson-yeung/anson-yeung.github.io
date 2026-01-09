@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anson Yeung — Composer</title>
+  <meta name="description" content="Anson Yeung composes music for film and the contemporary concert stage." />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Montserrat:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Anson Yeung</a>
+      <nav class="top-nav">
+        <a class="nav-link" href="film.html">Film Music</a>
+        <a class="nav-link" href="concert.html">Concert Music</a>
+        <a class="nav-contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner container">
+        <h1 class="statement">
+          <span>
+            I compose music for film and concert, exploring storytelling through sound.
+          </span>
+        </h1>
+
+        <div class="hero-ctas">
+          <a class="cta-simple" href="film.html">Film Music</a>
+          <a class="cta-simple" href="concert.html">Concert Works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-bg"></div>
+      <div class="about-overlay"></div>
+
+      <div class="about-inner container">
+        <div class="about-photo">
+          <img src="assets/images/portrait.jpg" alt="Anson Yeung Portrait">
+        </div>
+
+        <div class="about-bio">
+          <h2 class="about-title">About</h2>
+          <p>
+            I approach composition as a form of storytelling. For film, my music is shaped by narrative and emotion. I especially enjoy scoring animation, while also working across a range of genres.
+          </p>
+
+          <p>
+            In the concert world, my work primarily reflects on nature, life and human experience. Growing up in Hong Kong, my music reflects the intersection between East Asian musical traditions and contemporary Western harmony.
+          </p>
+
+          <p>
+            Alongside composing, I am currently active as a classical pianist. I trained at the Hong Kong Academy for Performing Arts with Dr. Cheng Wai, and have performed in the United Kingdom, the Czech Republic, the United States, and Hong Kong.
+          </p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> — <a href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

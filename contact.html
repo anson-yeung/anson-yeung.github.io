@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Anson Yeung</title>
+  <meta name="description" content="Contact Anson Yeung — composer for film and concert music." />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Libre+Caslon+Text:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .contact-container{
+      max-width:980px;
+      margin:120px auto 80px;
+      padding:0 20px;
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      align-items:center;
+      text-align:center;
+    }
+
+    .contact-panel{
+      width:100%;
+      padding:46px;
+      border-radius:0px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05));
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    .contact-title{
+      font-family:"Libre Baskerville",serif;
+      font-size:28px;
+      margin:0 0 12px;
+      color:var(--soft);
+    }
+
+    .contact-lead{
+      font-family:"IBM Plex Serif",serif;
+      font-size:18px;
+      color:var(--soft);
+      margin:0 0 18px;
+      line-height:1.6;
+      max-width:72ch;
+    }
+
+    .contact-email{
+      font-size:16px;
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    @media (max-width:900px){
+      .contact-container{margin:100px 16px 60px}
+      .contact-panel{padding:28px}
+      .contact-title{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Anson Yeung</a>
+      <nav class="top-nav">
+        <a class="nav-link" href="film.html">Film Music</a>
+        <a class="nav-link" href="concert.html">Concert Music</a>
+        <a class="nav-contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-container" aria-labelledby="contact-heading">
+      <div class="contact-panel" role="region" aria-labelledby="contact-heading">
+        <h1 id="contact-heading" class="contact-title">Contact</h1>
+        <p class="contact-lead">
+          For enquiries about commissions, performances, or scores, please contact me via email below. I respond to enquiries within 3 business days.
+        </p>
+        <a class="contact-email" href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> — <a href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

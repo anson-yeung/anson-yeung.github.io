@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Concert Music — Anson Yeung</title>
+  <meta name="description" content="Concert works by Anson Yeung. Score previews, performance notes and premieres." />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Libre+Caslon+Text:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root{ --concert-max:1100px; }
+
+    .concert-container{max-width:var(--concert-max);margin:120px auto 80px;padding:0 20px;color:var(--soft)}
+    .concert-heading{font-family:"Libre Baskerville",serif;font-size:28px;color:var(--soft);margin:0 0 12px}
+    .concert-statement{font-family:"IBM Plex Serif",serif;font-size:18px;color:var(--soft);max-width:84ch;margin:0 0 40px;line-height:1.56}
+    .works{display:flex;flex-direction:column;gap:42px;align-items:flex-start}
+
+    .work{
+      width:100%;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:20px;
+      align-items:start;
+      padding:18px 20px;
+      border-radius:0px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05));
+      border:1px solid rgba(255,255,255,0.5);
+    }
+    @media (max-width:900px){.work{grid-template-columns:1fr;gap:14px}}
+
+    .meta{color:var(--muted);font-size:14px;margin:6px 0 10px}
+    .work-desc{color:var(--muted);font-size:15px;max-width:70ch;margin-bottom:12px}
+    .score-preview{width:100%;max-width:420px;align-self:start}
+    .score-panel{border-radius:5px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background: rgba(255,255,255,0.1)}
+    .work-title{font-family:"Libre Baskerville",serif;font-size:20px;color:var(--soft);margin:0 0 6px}
+
+    @media (max-width:640px){.score-iframe{height:420px}.work{padding:14px}.concert-container{margin:100px 12px 60px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Anson Yeung</a>
+      <nav class="top-nav">
+        <a class="nav-link" href="film.html">Film Music</a>
+        <a class="nav-link" href="concert.html">Concert Music</a>
+        <a class="nav-contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="concert-container">
+      <h1 class="concert-heading">Concert Works</h1>
+      <p class="concert-statement">
+        My music reflects on the relationship between nature, human experience, and life. As a Hong Kong–born composer, my works explore the intersection of traditional East Asian musical cultures and contemporary Western harmonic language. I am particularly interested in the use of quartal and quintal harmonies as a means of mediating between these traditions. 
+      </p>
+
+      <div class="works">
+
+        <article class="work">
+          <div>
+            <h2 class="work-title"> The Tale of a Moth - for violin and piano (2026) </h2>
+            <div class="work-desc"> 
+              To be premiered in May 2026 at The Queen's College, Oxford
+          </div>
+        </article>
+
+        <article class="work">
+          <div>
+            <h2 class="work-title"> Petals - for unaccompanied SATB choir with divisi (2025)</h2>
+            <div class="meta"> Duration: 4'50'' </div>
+            <div class="work-desc">
+              <p><strong>Text by Amy Lowell (1874 – 1925)</strong></p>
+
+              <p>
+                Life is a stream<br>
+                On which we strew<br>
+                Petal by petal the flower of our heart;<br>
+                The end lost in dream,<br>
+                They float past our view,<br>
+                We only watch their glad, early start.
+              </p>
+
+              <p>
+                Freighted with hope,<br>
+                Crimsoned with joy,<br>
+                We scatter the leaves of our opening rose;<br>
+                Their widening scope,<br>
+                Their distant employ,<br>
+                We never shall know.
+              </p>
+
+              <p>
+                And the stream as it flows<br>
+                Sweeps them away,<br>
+                Each one is gone<br>
+                Ever beyond into infinite ways.
+              </p>
+
+              <p>
+                We alone stay<br>
+                While years hurry on,<br>
+                The flower fared forth, though its fragrance still stays.
+              </p>
+            </div>
+            <p style="margin:0;"><a href="assets/scores/petals.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download full score (PDF)</a></p>
+          </div>
+
+          <div class="score-preview">
+            <div class="score-panel">
+              <img src="assets/scores/petals.jpg" alt="Petals preview" style="width:100%;display:block;border:0;">
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <div>
+            <h2 class="work-title"> Lost in Time - for 2 violins, viola, cello and piano (2025) </h2>
+            <div class="meta"> 
+              Duration: 15' 30''
+              <p>
+                I. The relentless flow of time
+              </p>
+              <p>
+                II. Distant memories
+              </p>
+              <p> 
+                III. Time is a matrix 
+              </p>
+
+            </div>
+            <div class="work-desc"> 
+              On the surface, time appears as a continuous flow from past to present to future. Yet beneath this rational logic lies a more subjective dimension of time, one shaped by memory, emotion and perception which differs from person to person. This three-movement work explore the various ways time is experienced and felt.  
+              <p>
+                A more detailed programme note is given in the full score
+              </p>
+            </div>
+            <p style="margin:0;"><a href="assets/scores/lost_in_time.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download full score (PDF)</a></p>
+          </div>
+
+          <div class="score-preview">
+            <div class="score-panel">
+              <img src="assets/scores/lost_in_time.jpg" alt="Lost in Time preview" style="width:100%;display:block;border:0;">
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> — <a href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

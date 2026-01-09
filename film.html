@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Film Music — Anson Yeung</title>
+  <meta name="description" content="Film music by Anson Yeung. Selected film scores and reels." />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Libre+Caslon+Text:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root{ --film-max:1100px; }
+
+    .film-section{
+      position:relative;
+      width:100%;
+      min-height:60vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:140px 24px 100px;
+      margin-top:80px;
+      background-image:url('assets/images/film-bg.jpg');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .film-section::before{content:"";position:absolute;inset:0;background:rgba(8,12,16,0.70);z-index:0}
+    .film-section-inner{position:relative;z-index:1;max-width:900px;text-align:center;color:var(--soft)}
+    .film-section-title{font-family:"Libre Baskerville", serif;font-size:36px;margin:0 0 24px}
+    .film-section-statement{font-family:"IBM Plex Serif",serif;font-size:20px;line-height:1.6;margin:0 0 14px;max-width:72ch}
+
+    .film-container{max-width:var(--film-max);margin:0 auto;padding:80px 24px;display:flex;flex-direction:column;gap:56px;align-items:center;text-align:center}
+    .work{width:100%;max-width:1100px;display:flex;flex-direction:column;gap:18px}
+    .work-title{font-family:"Libre Baskerville", serif;font-size:20px;margin:0}
+    .work-meta{font-size:14px;color:var(--muted);margin:0}
+    .work-desc{font-size:15px;color:var(--muted);max-width:76ch;margin:0 auto}
+    .media-embed{width:100%;max-width:1100px;margin:0 auto}
+    .video-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)}
+    .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    @media (max-width:900px){
+      .film-section{min-height:60vh;padding:120px 18px 90px}
+      .film-section-title{font-size:26px}
+      .film-section-statement{font-size:18px}
+      .film-container{padding:60px 18px;gap:40px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Anson Yeung</a>
+      <nav class="top-nav">
+        <a class="nav-link" href="film.html">Film Music</a>
+        <a class="nav-link" href="concert.html">Concert Music</a>
+        <a class="nav-contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="film-section" aria-labelledby="film-section-title">
+      <div class="film-section-inner">
+        <h1 id="film-section-title" class="film-section-title">Film &amp; Media</h1>
+        <p class="film-section-statement">I believe in storytelling through sound. My primary goal is to write music that serves the narrative and emotional arc.</p>
+        <p class="film-section-statement"> In particular, I'm drawn to animation, though I also work across other genres and formats. </p>
+      </div>
+    </section>
+
+    <section class="film-container">
+      <article class="work">
+        <h2 class="work-title">Caminades 3: Llmaigo (2016)</h2>
+        <p class="work-meta">Animation • Re-score (2025) • Duration: 2:31</p>
+        <div class="media-embed">
+          <div class="video-wrap">
+            <iframe src="https://player.vimeo.com/video/1152783896" allowfullscreen></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <h2 class="work-title">Coffee Run (2020)</h2>
+        <p class="work-meta">Animation • Re-score (2025) • Duration: 3:05</p>
+        <div class="media-embed">
+          <div class="video-wrap">
+            <iframe src="https://player.vimeo.com/video/1152785494" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="work-desc">Electronic music is primarily used in this re-score.</p>
+      </article>
+
+      <article class="work">
+        <h2 class="work-title">Elephants Dream (2006)</h2>
+        <p class="work-meta">Animation • Re-score (2025) • Clip: 6:25 - 9:03</p>
+        <div class="media-embed">
+          <div class="video-wrap">
+            <iframe src="https://player.vimeo.com/video/1152786964" allowfullscreen></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <h2 class="work-title">Harpwell & Sons by CueTube (2025)</h2>
+        <p class="work-meta">Commerical • Original score (2026) • Duration: 00:58</p>
+        <div class="media-embed">
+          <div class="video-wrap">
+            <iframe src="https://player.vimeo.com/video/1152787358" allowfullscreen></iframe>
+          </div>
+        </div>
+      </article>
+
+
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> — <a href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
