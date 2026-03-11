@@ -42,10 +42,15 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Anson Yeung</a>
-      <nav class="top-nav">
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </button>
+      <nav id="main-nav", class="top-nav">
         <a class="nav-link" href="film.html">Film Music</a>
         <a class="nav-link" href="concert.html">Concert Music</a>
-        <a class="nav-contact" href="contact.html">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -53,11 +58,34 @@
   <main>
     <section class="concert-container">
       <h1 class="concert-heading">Concert Works</h1>
-      <p class="concert-statement">
-        My music reflects on the relationship between nature, human experience, and life. As a Hong Kong–born composer, my works explore the intersection of traditional East Asian musical cultures and contemporary Western harmonic language. I am particularly interested in the use of quartal and quintal harmonies as a means of mediating between these traditions. 
-      </p>
+
+      <div class="concert-intro">
+        <div class="concert-text">
+          <p class="concert-statement">
+            My music reflects on the relationship between nature, human experience, and life.
+            As a Hong Kong–born composer, my current focus is integrating East Asian musical traditions with contemporary Western harmony. In particular, my works explore the possibilities of quartal and quintal harmony. My most recent composition, <em>Lost In Time</em>, has been performed by the Adler Quartet in the Holywell Music Room.
+          </p>
+
+          <p class="concert-statement">
+            Moreover, I am active as a classical pianist. Trained in the Hong Kong Academy for Performing Arts with Dr. Cheng Wai, I have performed internationally in the United Kingdom, the Czech Republic, the United States, and Hong Kong.
+          </p>
+        </div>
+
+        <div class="concert-image" aria-hidden="true">
+          <img src="assets/images/concert_performing.jpg" alt="Composer at the piano">
+        </div>
+      </div>
 
       <div class="works">
+        
+        <article class="work">
+          <div>
+            <h2 class="work-title"> Matsu - for string orchestra (2026) </h2>
+            <div class="work-desc"> 
+              To be premiered in May - June 2026 by Oxford University String Ensemble
+          </div>
+        </article>
+
 
         <article class="work">
           <div>
@@ -68,6 +96,42 @@
         </article>
 
         <article class="work">
+          <div>
+            <h2 class="work-title"> Lost in Time - for piano sextet (2026) </h2>
+            <div class="meta"> 
+              <p>
+                Premiered in Holywell Music Room with Adler Quartet (March 2026)
+              </p>
+              Duration: 15' 30''
+
+              <p>
+                I. The relentless flow of time
+              </p>
+              <p>
+                II. Distant memories
+              </p>
+              <p> 
+                III. Time is a matrix 
+              </p>
+
+            </div>
+            <div class="work-desc"> 
+              On the surface, time appears as a continuous flow from past to present to future. Yet beneath this rational logic lies a more subjective dimension of time, one shaped by memory, emotion and perception which differs from person to person. This three-movement work explore the various ways time is experienced and felt.  
+              <p>
+                A more detailed programme note is given in the full score
+              </p>
+            </div>
+            <p style="margin:0;"><a href="assets/scores/lost_in_time.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download perusal score (PDF)</a></p>
+          </div>
+
+          <div class="score-preview">
+            <div class="score-panel">
+              <img src="assets/scores/lost_in_time.jpg" alt="Lost in Time preview" style="width:100%;display:block;border:0;">
+            </div>
+          </div>
+        </article>
+
+                <article class="work">
           <div>
             <h2 class="work-title"> Petals - for unaccompanied SATB choir with divisi (2025)</h2>
             <div class="meta"> Duration: 4'50'' </div>
@@ -105,7 +169,7 @@
                 The flower fared forth, though its fragrance still stays.
               </p>
             </div>
-            <p style="margin:0;"><a href="assets/scores/petals.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download full score (PDF)</a></p>
+            <p style="margin:0;"><a href="assets/scores/petals.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download perusal score (PDF)</a></p>
           </div>
 
           <div class="score-preview">
@@ -115,46 +179,50 @@
           </div>
         </article>
 
-        <article class="work">
-          <div>
-            <h2 class="work-title"> Lost in Time - for 2 violins, viola, cello and piano (2025) </h2>
-            <div class="meta"> 
-              Duration: 15' 30''
-              <p>
-                I. The relentless flow of time
-              </p>
-              <p>
-                II. Distant memories
-              </p>
-              <p> 
-                III. Time is a matrix 
-              </p>
-
-            </div>
-            <div class="work-desc"> 
-              On the surface, time appears as a continuous flow from past to present to future. Yet beneath this rational logic lies a more subjective dimension of time, one shaped by memory, emotion and perception which differs from person to person. This three-movement work explore the various ways time is experienced and felt.  
-              <p>
-                A more detailed programme note is given in the full score
-              </p>
-            </div>
-            <p style="margin:0;"><a href="assets/scores/lost_in_time.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download full score (PDF)</a></p>
-          </div>
-
-          <div class="score-preview">
-            <div class="score-panel">
-              <img src="assets/scores/lost_in_time.jpg" alt="Lost in Time preview" style="width:100%;display:block;border:0;">
-            </div>
-          </div>
-        </article>
-
       </div>
     </section>
   </main>
 
-  <footer class="site-footer container">
-    <p>© <span id="year"></span> — <a href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a></p>
+  <footer class="site-footer">
+  © 2026 — <a href="mailto:ansonnyeung.music@gmail.com" style="color: var(--muted); text-decoration: none;">ansonyeung.music@gmail.com</a>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    (function(){
+      // small, defensive script to toggle mobile nav
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.top-nav') || document.getElementById('main-nav');
+      if (!btn || !nav) return;
+
+      // toggle menu open/close
+      btn.addEventListener('click', (e) => {
+        const isOpen = nav.classList.toggle('show');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        // optionally update label
+        btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
+
+      // close nav when a link inside it is clicked (mobile)
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('show');
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','Open menu');
+      }));
+
+      // close nav when clicking outside (nice-to-have)
+      document.addEventListener('click', (ev) => {
+        if (!nav.classList.contains('show')) return;
+        const isClickInside = nav.contains(ev.target) || btn.contains(ev.target);
+        if (!isClickInside) {
+          nav.classList.remove('show');
+          btn.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-label','Open menu');
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>

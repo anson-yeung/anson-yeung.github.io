@@ -51,10 +51,15 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Anson Yeung</a>
-      <nav class="top-nav">
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </button>
+      <nav id="main-nav", class="top-nav">
         <a class="nav-link" href="film.html">Film Music</a>
         <a class="nav-link" href="concert.html">Concert Music</a>
-        <a class="nav-contact" href="contact.html">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -114,10 +119,45 @@
     </section>
   </main>
 
-  <footer class="site-footer container">
-    <p>© <span id="year"></span> — <a href="mailto:youremail@example.com">ansonyeung.music@gmail.com</a></p>
+  <footer class="site-footer">
+  © 2026 — <a href="mailto:ansonnyeung.music@gmail.com" style="color: var(--muted); text-decoration: none;">ansonyeung.music@gmail.com</a>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    (function(){
+      // small, defensive script to toggle mobile nav
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.top-nav') || document.getElementById('main-nav');
+      if (!btn || !nav) return;
+
+      // toggle menu open/close
+      btn.addEventListener('click', (e) => {
+        const isOpen = nav.classList.toggle('show');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        // optionally update label
+        btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
+
+      // close nav when a link inside it is clicked (mobile)
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('show');
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','Open menu');
+      }));
+
+      // close nav when clicking outside (nice-to-have)
+      document.addEventListener('click', (ev) => {
+        if (!nav.classList.contains('show')) return;
+        const isClickInside = nav.contains(ev.target) || btn.contains(ev.target);
+        if (!isClickInside) {
+          nav.classList.remove('show');
+          btn.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-label','Open menu');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -45,14 +45,11 @@ body{
 }
 
 /* Navigation */
-.top-nav{display:flex;gap:18px;align-items:center}
-.nav-link{color:var(--muted);text-decoration:none;font-size:15px;padding:6px 8px;font-family: "Montserrat", sans-serif}
-.nav-link:hover{color:var(--soft)}
-.nav-contact{
-  margin-left:8px;padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);
-  color:var(--muted);text-decoration:none;font-size:15px;font-family: "Montserrat", sans-serif;
-}
-.nav-contact:hover{color:var(--soft);border-color:rgba(255,255,255,0.08)}
+.top-nav{display:flex;gap:18px;align-items:center} 
+.nav-link{color:var(--muted);text-decoration:none;font-size:15px;padding:6px 8px;font-family: "Montserrat", sans-serif} 
+.nav-link:visited { color: var(--muted); } 
+.nav-link:hover { color: var(--soft); } 
+.nav-link:active { color: var(--soft); }
 
 /* HERO */
 .hero{
@@ -79,7 +76,7 @@ body{
 }
 .hero-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(6,10,12,0.60), rgba(6,10,12,0.66));
+  background:linear-gradient(180deg, rgba(6,10,12,0.20), rgba(6,10,12,0.75));
   z-index:1;
 }
 .hero-inner{
@@ -206,7 +203,7 @@ body.home .statement{
 .cta-simple:hover{border-color: rgba(255,255,255,0.45)}
 
 /* Footer */
-.site-footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:14px;text-align:center}
+.site-footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.3);color:var(--muted);font-size:14px;text-align:center}
 
 /* Responsive */
 @media (max-width:900px){
@@ -232,4 +229,156 @@ body.home .statement{
     transform: translateY(0);
   }
 }
+
+/* Concert page */
+.concert-intro{
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px; /* same spacing as previous */
+}
+
+.concert-text{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;      /* space between paragraphs */
+  flex: 1 1 0;    /* let text take remaining width */
+  min-width: 0;   /* prevents overflow with long words */
+}
+
+.concert-text .concert-statement{
+  margin: 0;           /* remove default p margins */
+  max-width: none;     /* allow column to fill available width */
+  line-height: 1.56;
+}
+
+.concert-image{
+  width: 420px;        /* matches your earlier preview width */
+  flex: 0 0 420px;
+}
+.concert-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+@media (max-width: 900px){
+  .concert-intro{
+    flex-direction: column;
+  }
+  .concert-image{
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}
+
+
+/* -------------------------
+   MOBILE NAV TOGGLE & RESPONSIVE NAV
+   ------------------------- */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  padding:8px;
+  margin-left:8px;
+  color:var(--soft);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+}
+
+/* default nav for larger screens remains unchanged */
+@media (max-width:900px){
+  /* show the toggle on small screens */
+  .nav-toggle{ display:inline-flex; }
+
+  /* mobile dropdown panel */
+  .top-nav{
+    position: absolute;
+    right: 12px;
+    top: 64px; /* adjust if your header height differs */
+    background: var(--header-bg);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 12px;
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+    z-index: 80;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.45);
+    border-radius: 10px;
+  }
+
+  .top-nav.show { display: flex; }
+
+  .top-nav .nav-link{
+    padding: 10px 14px;
+    font-size: 16px;
+    display: block;
+    min-height: 44px;
+  }
+
+  /* make sure header layout works on small screens */
+  .header-inner{ display:flex; align-items:center; gap:12px; justify-content:space-between; }
+}
+
+/* optional: close the menu if user clicks outside (JS handles better) */
+
+/* -------------------------
+   HERO & LAYOUT TWEAKS FOR SMALL SCREENS
+   ------------------------- */
+@media (max-width:900px){
+  .hero{ min-height:70vh; }
+  .hero-inner{ padding:36px 18px; gap:20px; }
+  .statement{ font-size:24px; line-height:1.2; max-width:40ch; }
+  .hero-ctas { flex-direction:column; gap:12px; align-items:flex-start; }
+}
+
+/* tiny phones */
+@media (max-width:420px){
+  body{ font-size:15px; }
+  .statement{ font-size:20px; }
+}
+
+/* -------------------------
+   RESPONSIVE MEDIA (images, iframes, videos)
+   ------------------------- */
+img, iframe, video, embed, object {
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* keep embed aspect ratio container if you already use one */
+.video-wrap{ aspect-ratio:16/9; width:100%; max-width:100%; }
+
+/* -------------------------
+   TOUCH TARGETS / TAP SIZES
+   ------------------------- */
+a.nav-link, .cta-simple, .contact-email {
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+}
+
+/* -------------------------
+   FOOTER / CONTACT EMAIL COLOR FIX
+   ------------------------- */
+/* Ensure footer/contacts don't fall back to browser default blue/purple */
+.site-footer a, .contact-panel a, .contact-email {
+  color: var(--muted) !important;
+  text-decoration: none !important;
+}
+.site-footer a:visited, .contact-panel a:visited, .contact-email:visited {
+  color: var(--muted) !important;
+}
+
+/* If you want an accent color on the contact page specifically, scope it:
+   .contact-page .contact-email { color: var(--accent); } 
+   This prevents the footer from inheriting accent color unintentionally. */
 
