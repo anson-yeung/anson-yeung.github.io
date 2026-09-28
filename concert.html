@@ -5,38 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Concert Music — Anson Yeung</title>
   <meta name="description" content="Concert works by Anson Yeung. Score previews, performance notes and premieres." />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Libre+Caslon+Text:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    :root{ --concert-max:1100px; }
-
-    .concert-container{max-width:var(--concert-max);margin:120px auto 80px;padding:0 20px;color:var(--soft)}
-    .concert-heading{font-family:"Libre Baskerville",serif;font-size:28px;color:var(--soft);margin:0 0 12px}
-    .concert-statement{font-family:"IBM Plex Serif",serif;font-size:18px;color:var(--soft);max-width:84ch;margin:0 0 40px;line-height:1.56}
-    .works{display:flex;flex-direction:column;gap:42px;align-items:flex-start}
-
-    .work{
-      width:100%;
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:20px;
-      align-items:start;
-      padding:18px 20px;
-      border-radius:0px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05));
-      border:1px solid rgba(255,255,255,0.5);
-    }
-    @media (max-width:900px){.work{grid-template-columns:1fr;gap:14px}}
-
-    .meta{color:var(--muted);font-size:14px;margin:6px 0 10px}
-    .work-desc{color:var(--muted);font-size:15px;max-width:70ch;margin-bottom:12px}
-    .score-preview{width:100%;max-width:420px;align-self:start}
-    .score-panel{border-radius:5px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background: rgba(255,255,255,0.1)}
-    .work-title{font-family:"Libre Baskerville",serif;font-size:20px;color:var(--soft);margin:0 0 6px}
-
-    @media (max-width:640px){.score-iframe{height:420px}.work{padding:14px}.concert-container{margin:100px 12px 60px}}
-  </style>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -47,8 +18,8 @@
           <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
         </svg>
       </button>
-      <nav id="main-nav", class="top-nav">
-        <a class="nav-link" href="film.html">Film Music</a>
+      <nav id="main-nav" class="top-nav">
+        <a class="nav-link" href="film.html">Film &amp; Game Music</a>
         <a class="nav-link" href="concert.html">Concert Music</a>
         <a class="nav-link" href="contact.html">Contact</a>
       </nav>
@@ -77,12 +48,61 @@
       </div>
 
       <div class="works">
-        
+
         <article class="work">
           <div>
-            <h2 class="work-title"> Matsu - for string orchestra (2026) </h2>
-            <div class="work-desc"> 
-              To be premiered in May - June 2026 by Oxford University String Ensemble
+            <h2 class="work-title"> Preces and Responses - for SATB unaccompanied</h2>
+            <div class="meta"> 
+              <p>
+                 Composing - to be premiered soon.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <div>
+            <h2 class="work-title"> Wisteria - for solo piano (2026)</h2>
+            <div class="meta"> 
+              <p>
+                 Premiered in The Queen's College Chapel (June 2026)
+              </p>
+            </div>
+            <div class="work-desc">
+              Inspired by walking down Queen's Lane in spring, with the wind blowing through the wisteria on the walls. In the middle, the sound of change-ringing bells can be heard. Listen to the audio below:
+            </div>
+            <audio controls preload="none">
+              <source src="assets/audio/Wisteria.mp3" type="audio/mpeg">
+            </audio>
+            <p class="score-link"><a href="assets/scores/wisteria.pdf" target="_blank">Download perusal score (PDF)</a></p>
+          </div>
+
+          <div class="score-preview">
+            <div class="score-panel">
+              <img src="assets/scores/wisteria.jpg" alt="Wisteria preview">
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <div>
+            <h2 class="work-title"> Matsu - for string orchestra (2026)</h2>
+            <div class="meta"> 
+              <p>
+                 Premiered in The Schwarzman Centre for the Humanities (June 2026)
+              </p>
+
+              <p>
+                Matsu (まつ, 松), also known as Japanese pine, is a cultural symbol of resilience and inner strength. During a visit to Hokkaido in December, I encountered snow-covered shrines. While many trees stood bare and withered in the harsh winter conditions, the pine trees remained upright and green. It has inspired me to write a piece that reflects the pine's solitude and resilience in the winter. Traditional Japanese tone clusters, also known as aitake (合⽵), are used throughout the composition. 
+              </p>
+            </div>
+            <p class="score-link"><a href="assets/scores/matsu.pdf" target="_blank">Download perusal score (PDF)</a></p>
+          </div>
+
+          <div class="score-preview">
+            <div class="score-panel">
+              <img src="assets/scores/matsu.jpg" alt="Matsu preview">
+            </div>
           </div>
         </article>
 
@@ -98,12 +118,12 @@
                 The patterns of nature have always fascinated me. One day, while watching a moth circling a lamp in my home, I began to think about its life journey. It begins life as a larva, then encloses itself in a cocoon and undergoes metamorphosis into a moth. However, just as it gains the ability to fly, it is drawn to the glow of light, circling endlessly until it falls lifeless to the ground. I hope this piece captures the fragile beauty and perhaps the tragedy of a moth’s life. 
               </p>
             </div>
-            <p style="margin:0;"><a href="assets/scores/the_tale_of_a_moth.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download perusal score (PDF)</a></p>
+            <p class="score-link"><a href="assets/scores/the_tale_of_a_moth.pdf" target="_blank">Download perusal score (PDF)</a></p>
           </div>
 
           <div class="score-preview">
             <div class="score-panel">
-              <img src="assets/scores/the_tale_of_a_moth.jpg" alt="The Tale of a Moth preview" style="width:100%;display:block;border:0;">
+              <img src="assets/scores/the_tale_of_a_moth.jpg" alt="The Tale of a Moth preview">
             </div>
           </div>
         </article>
@@ -129,17 +149,17 @@
 
             </div>
             <div class="work-desc"> 
-              On the surface, time appears as a continuous flow from past to present to future. Yet beneath this rational logic lies a more subjective dimension of time, one shaped by memory, emotion and perception which differs from person to person. This three-movement work explore the various ways time is experienced and felt.  
+              On the surface, time appears as a continuous flow from past to present to future. Yet beneath this rational logic lies a more subjective dimension of time, one shaped by memory, emotion and perception which differs from person to person. This three-movement work explores the various ways time is experienced and felt.  
               <p>
                 A more detailed programme note is given in the full score
               </p>
             </div>
-            <p style="margin:0;"><a href="assets/scores/lost_in_time.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download perusal score (PDF)</a></p>
+            <p class="score-link"><a href="assets/scores/lost_in_time.pdf" target="_blank">Download perusal score (PDF)</a></p>
           </div>
 
           <div class="score-preview">
             <div class="score-panel">
-              <img src="assets/scores/lost_in_time.jpg" alt="Lost in Time preview" style="width:100%;display:block;border:0;">
+              <img src="assets/scores/lost_in_time.jpg" alt="Lost in Time preview">
             </div>
           </div>
         </article>
@@ -182,12 +202,12 @@
                 The flower fared forth, though its fragrance still stays.
               </p>
             </div>
-            <p style="margin:0;"><a href="assets/scores/petals.pdf" target="_blank" style="color:var(--soft);text-decoration:underline;">Download perusal score (PDF)</a></p>
+            <p class="score-link"><a href="assets/scores/petals.pdf" target="_blank">Download perusal score (PDF)</a></p>
           </div>
 
           <div class="score-preview">
             <div class="score-panel">
-              <img src="assets/scores/petals.jpg" alt="Petals preview" style="width:100%;display:block;border:0;">
+              <img src="assets/scores/petals.jpg" alt="Petals preview">
             </div>
           </div>
         </article>
@@ -197,45 +217,7 @@
   </main>
 
   <footer class="site-footer">
-  © 2026 — <a href="mailto:ansonnyeung.music@gmail.com" style="color: var(--muted); text-decoration: none;">ansonyeung.music@gmail.com</a>
+    © 2026 — <a href="mailto:ansonyeung.music@gmail.com">ansonyeung.music@gmail.com</a>
   </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-  <script>
-    (function(){
-      // small, defensive script to toggle mobile nav
-      const btn = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.top-nav') || document.getElementById('main-nav');
-      if (!btn || !nav) return;
-
-      // toggle menu open/close
-      btn.addEventListener('click', (e) => {
-        const isOpen = nav.classList.toggle('show');
-        btn.setAttribute('aria-expanded', String(isOpen));
-        // optionally update label
-        btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      });
-
-      // close nav when a link inside it is clicked (mobile)
-      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-        nav.classList.remove('show');
-        btn.setAttribute('aria-expanded','false');
-        btn.setAttribute('aria-label','Open menu');
-      }));
-
-      // close nav when clicking outside (nice-to-have)
-      document.addEventListener('click', (ev) => {
-        if (!nav.classList.contains('show')) return;
-        const isClickInside = nav.contains(ev.target) || btn.contains(ev.target);
-        if (!isClickInside) {
-          nav.classList.remove('show');
-          btn.setAttribute('aria-expanded','false');
-          btn.setAttribute('aria-label','Open menu');
-        }
-      });
-    })();
-  </script>
-
 </body>
 </html>
